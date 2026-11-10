@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radar Global | Geopolítica y Conflictos</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#121212;
+color:#fff;
+line-height:1.6;
+}
+
+header{
+background:#181818;
+padding:20px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #2a2a2a;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-icon{
+width:50px;
+height:50px;
+border-radius:50%;
+border:3px solid #00bfff;
+position:relative;
+}
+
+.logo-icon::before{
+content:'';
+position:absolute;
+width:15px;
+height:15px;
+background:#00ff88;
+border-radius:50%;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+
+.logo h1{
+font-size:1.5rem;
+color:#00bfff;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00bfff;
+}
+
+.hero{
+padding:80px 5%;
+text-align:center;
+background:linear-gradient(180deg,#121212,#1a1a1a);
+}
+
+.hero h2{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+color:#ccc;
+font-size:1.1rem;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+background:#00bfff;
+padding:15px 30px;
+border-radius:8px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.section{
+padding:60px 5%;
+}
+
+.section-title{
+margin-bottom:30px;
+font-size:2rem;
+color:#00bfff;
+}
+
+.news-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1e1e1e;
+border-radius:15px;
+overflow:hidden;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+color:#cfcfcf;
+}
+
+.card a{
+display:inline-block;
+margin-top:15px;
+color:#00bfff;
+text-decoration:none;
+}
+
+.map-section{
+
+background:#181818;
+padding:70px 5%;
+text-align:center;
+}
+
+.map-placeholder{
+margin-top:30px;
+height:500px;
+background:#232323;
+border:2px dashed #00bfff;
+border-radius:15px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:1.3rem;
+color:#999;
+}
+
+.footer{
+padding:30px;
+text-align:center;
+border-top:1px solid #2a2a2a;
+color:#999;
+}
+
+.breaking{
+background:#b30000;
+padding:10px;
+text-align:center;
+font-weight:bold;
+}
+
+@media(max-width:768px){
+
+.hero h2{
+font-size:2rem;
+}
+
+nav{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="breaking">
+🚨 Última hora | Sigue la actualidad geopolítica mundial en tiempo real
+</div>
+
+<header>
+
+<div class="logo">
+
+<div class="logo-icon"></div>
+
+<h1>RADAR GLOBAL</h1>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="#">Inicio</a></li>
+<li><a href="#">Conflictos</a></li>
+<li><a href="#">Geopolítica</a></li>
+<li><a href="#">Defensa</a></li>
+<li><a href="#">Mapa Mundial</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>Información Geopolítica Global</h2>
+
+<p>
+Seguimiento de conflictos internacionales, análisis estratégicos,
+defensa, seguridad internacional y actualidad mundial explicada de forma clara.
+</p>
+
+<a class="btn" href="#">Explorar Noticias</a>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Noticias Destacadas</h2>
+
+<div class="news-grid">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2" alt="">
+
+<div class="card-content">
+
+<h3>Conflicto Rusia - Ucrania</h3>
+
+<p>
+Seguimiento diario sobre la evolución del frente y situación actual.
+</p>
+
+<a href="#">Leer más →</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1571415060716-baff5f717c37" alt="">
+
+<div class="card-content">
+
+<h3>Oriente Medio</h3>
+
+<p>
+Información actualizada sobre los acontecimientos de la región.
+</p>
+
+<a href="#">Leer más →</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff" alt="">
+
+<div class="card-content">
+
+<h3>Asia-Pacífico</h3>
+
+<p>
+Noticias relacionadas con China, Taiwán y seguridad regional.
+</p>
+
+<a href="#">Leer más →</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="map-section">
+
+<h2 class="section-title">Mapa Interactivo de Conflictos</h2>
+
+<p>
+Visualiza los conflictos activos y zonas de tensión en tiempo real.
+</p>
+
+<div class="map-placeholder">
+
+🗺️ Aquí irá el mapa interactivo (Leaflet + OpenStreetMap)
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Radar Estratégico</h2>
+
+<div class="news-grid">
+
+<div class="card">
+
+<div class="card-content">
+
+<h3>Defensa</h3>
+
+<p>Drones, armamento, tecnología militar y análisis táctico.</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-content">
+
+<h3>Economía Global</h3>
+
+<p>Impacto económico de los conflictos internacionales.</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-content">
+
+<h3>Contexto Histórico</h3>
+
+<p>Explicación histórica para entender cada conflicto.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+© 2026 Radar Global | Información geopolítica y actualidad mundial
+
+</footer>
+
+</body>
+</html>
