@@ -3,11 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radar Global | Geopolítica y Conflictos</title>
+
+<title>Radar Global</title>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -15,29 +14,24 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Inter',sans-serif;
+font-family:Arial, sans-serif;
 }
 
 body{
-background:#121212;
-color:#ffffff;
-line-height:1.6;
-}
-
-.breaking{
-background:#a30000;
-padding:10px;
-text-align:center;
-font-weight:bold;
+background:#101010;
+color:white;
+height:100vh;
+overflow:hidden;
 }
 
 header{
-background:#181818;
-padding:20px 5%;
+height:70px;
+background:#161616;
 display:flex;
-justify-content:space-between;
 align-items:center;
-border-bottom:1px solid #2a2a2a;
+justify-content:space-between;
+padding:0 20px;
+border-bottom:1px solid #2d2d2d;
 }
 
 .logo{
@@ -46,225 +40,87 @@ align-items:center;
 gap:10px;
 }
 
-.logo-icon{
-width:50px;
-height:50px;
-border:3px solid #00bfff;
-border-radius:50%;
-position:relative;
-}
-
-.logo-icon::before{
-content:"";
-width:14px;
-height:14px;
+.radar{
+width:20px;
+height:20px;
 background:#00ff88;
 border-radius:50%;
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
+box-shadow:0 0 15px #00ff88;
 }
 
 .logo h1{
+font-size:22px;
 color:#00bfff;
 }
 
-nav ul{
+.container{
 display:flex;
-gap:20px;
-list-style:none;
+height:calc(100vh - 70px);
 }
 
-nav a{
-color:white;
-text-decoration:none;
-}
-
-.hero{
-padding:80px 20px;
-text-align:center;
-}
-
-.hero h2{
-font-size:3rem;
-margin-bottom:20px;
-}
-
-.hero p{
-max-width:800px;
-margin:auto;
-color:#cfcfcf;
-}
-
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:15px 30px;
-border-radius:8px;
-background:#00bfff;
-color:white;
-text-decoration:none;
-}
-
-.section{
-padding:60px 5%;
-}
-
-.section-title{
-color:#00bfff;
-margin-bottom:30px;
-}
-
-.news-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-}
-
-.card{
-background:#1e1e1e;
-border-radius:15px;
-overflow:hidden;
-}
-
-.card img{
-width:100%;
-height:220px;
-object-fit:cover;
-}
-
-.card-content{
+.sidebar{
+width:350px;
+background:#171717;
+overflow-y:auto;
 padding:20px;
+border-right:1px solid #2a2a2a;
 }
 
-.card p{
-color:#cccccc;
+.sidebar h2{
+margin-bottom:15px;
+color:#00bfff;
 }
 
-.map-section{
-padding:60px 5%;
-background:#181818;
+.conflict{
+background:#222;
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+.conflict:hover{
+background:#2c2c2c;
+}
+
+.red{
+border-left:5px solid red;
+}
+
+.orange{
+border-left:5px solid orange;
+}
+
+.yellow{
+border-left:5px solid yellow;
+}
+
+.map-container{
+flex:1;
+position:relative;
 }
 
 #map{
-height:500px;
+height:100%;
 width:100%;
-margin-top:25px;
-border-radius:15px;
-overflow:hidden;
 }
 
-.footer{
-padding:30px;
-text-align:center;
-color:#888;
-border-top:1px solid #2a2a2a;
+.info-box{
+position:absolute;
+bottom:20px;
+right:20px;
+background:rgba(20,20,20,.95);
+padding:15px;
+border-radius:10px;
+max-width:320px;
+border:1px solid #333;
 }
 
-@media(max-width:768px){
-
-nav{
-display:none;
+.info-box h3{
+color:#00bfff;
+margin-bottom:10px;
 }
 
-.hero h2{
-font-size:2rem;
-}
+@media(max-width:900px){
 
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="breaking">
-🚨 Última hora | Radar Global
-</div>
-
-<header>
-
-<div class="logo">
-<div class="logo-icon"></div>
-<h1>RADAR GLOBAL</h1>
-</div>
-
-<nav>
-<ul>
-<li><a href="#">Inicio</a></li>
-<li><a href="#">Conflictos</a></li>
-<li><a href="#">Geopolítica</a></li>
-<li><a href="#">Defensa</a></li>
-<li><a href="#">Mapa</a></li>
-</ul>
-</nav>
-
-</header>
-
-<section class="hero">
-
-<h2>Información Geopolítica Global</h2>
-
-<p>
-Seguimiento de conflictos internacionales, análisis estratégicos,
-defensa, seguridad internacional y actualidad mundial explicada de forma clara.
-</p>
-
-<a href="#" class="btn">Explorar noticias</a>
-
-</section>
-
-<section class="section">
-
-<h2 class="section-title">Noticias Destacadas</h2>
-
-<div class="news-grid">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1200&q=80">
-<div class="card-content">
-<h3>Rusia - Ucrania</h3>
-<p>Seguimiento diario del conflicto y situación actual.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1571415060716-baff5f717c37?auto=format&fit=crop&w=1200&q=80">
-<div class="card-content">
-<h3>Oriente Medio</h3>
-<p>Información actualizada sobre la región.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1200&q=80">
-<div class="card-content">
-<h3>Asia-Pacífico</h3>
-<p>China, Taiwán y seguridad regional.</p>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<section class="map-section">
-
-<h2 class="section-title">Mapa Interactivo de Conflictos</h2>
-
-<p>Haz clic en los marcadores para obtener información.</p>
-
-<div id="map"></div>
-
-</section>
-
-<footer class="footer">
-© 2026 Radar Global
-</footer>
-
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-<script>
-
-var map =
