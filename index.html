@@ -387,5 +387,30 @@ Visualiza los conflictos activos y zonas de tensión en tiempo real.
 
 </footer>
 
-</body>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+
+var map = L.map('map').setView([30, 20], 2);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+ attribution: '&copy; OpenStreetMap'
+}).addTo(map);
+
+// Ucrania
+L.marker([48.3794, 31.1656])
+.addTo(map)
+.bindPopup('<b>Rusia - Ucrania</b><br>Conflicto activo');
+
+// Israel
+L.marker([31.0461, 34.8516])
+.addTo(map)
+.bindPopup('<b>Oriente Medio</b><br>Tensión regional');
+
+// Taiwán
+L.marker([23.6978, 120.9605])
+.addTo(map)
+.bindPopup('<b>Taiwán</b><br>Situación estratégica');
+
+</script>
 </html>
